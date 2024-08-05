@@ -48,14 +48,13 @@ header nav ul a {
 
 header nav ul a:hover {
   color: #FF6D85;
-  padding-bottom: 5px;
+  text-shadow: 0 0 36px #FF6D85;
   -webkit-transition: all ease .3s;
   transition: all ease .3s;
 }
 
 header .intro {
   padding-top: 300px;
-  height: 100vh;
   font-size: 73px;
   font-weight: 300;
   padding-left: 300px;
@@ -70,6 +69,7 @@ header .intro span {
   color: #FF6D85;
   padding-bottom: 5px;
   border-bottom: 2px solid #FF6D85;
+  text-shadow: 0 0 36px #FF6D85;
 }
 
 .buttons {
@@ -85,12 +85,68 @@ header .intro span {
   text-decoration: none;
 }
 
+.button1:hover {
+  background: #ff3a5a;
+  -webkit-transition: all ease .3s;
+  transition: all ease .3s;
+  -webkit-box-shadow: 0 0 75px rgba(255, 109, 133, 0.5);
+          box-shadow: 0 0 75px rgba(255, 109, 133, 0.5);
+}
+
 .button2 {
   background: none;
   padding: 17px 73px;
   border: none;
   font-size: 18px;
+  border-radius: 3px;
   font-weight: 700;
   text-decoration: underline;
+}
+
+.button2:hover {
+  -webkit-transition: all ease .3s;
+  transition: all ease .3s;
+  color: #FF6D85;
+  text-shadow: 0 0 36px #FF6D85;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 150px;
+  background-color: #FFFFFF;
+  color: black;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -73px;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #FFFFFF transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
 }
 /*# sourceMappingURL=style.css.map */

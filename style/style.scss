@@ -37,7 +37,7 @@ header {
                 margin: 0;
                 &:hover {
                     color: $pink;
-                    padding-bottom: 5px;
+                    text-shadow: 0 0 36px $pink;
                     transition: all ease .3s;
                 }
             }
@@ -45,7 +45,6 @@ header {
     }
     .intro {
         padding-top: 300px;
-        height: 100vh;
         font-size: 73px;
         font-weight: 300;
         padding-left: 300px;
@@ -60,6 +59,7 @@ header {
     color: $pink;
     padding-bottom: 5px;
     border-bottom: 2px solid $pink;
+    text-shadow: 0 0 36px $pink;
 }
 
 .buttons {
@@ -73,6 +73,11 @@ header {
     border-radius: 3px;
     font-weight: 700;
     text-decoration: none;
+    &:hover {
+        background: darken($pink, 10%);
+        transition: all ease .3s;
+        box-shadow: 0 0 75px rgba($pink, .5);
+    }
 }
 
 .button2 {
@@ -80,6 +85,51 @@ header {
     padding: 17px 73px;
     border: none;
     font-size: 18px;
+    border-radius: 3px;
     font-weight: 700;
     text-decoration: underline;
+    &:hover {
+        transition: all ease .3s;
+        color: $pink;
+        text-shadow: 0 0 36px $pink;
+    }
 }
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 150px;
+    background-color: $white;
+    color: black;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -73px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: $white transparent transparent transparent;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
