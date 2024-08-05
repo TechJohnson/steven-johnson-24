@@ -3,24 +3,34 @@ $white: #FFFFFF;
 $gray: #1C1C1C;
 
 * {
-    background: $gray;
     color: $white;
     font-family: "Roboto", sans-serif;
     padding: 0;
     margin: 0;
 }
 
+body {
+    background: $gray;
+    font-size: 18px;
+}
+
 header {
-    padding: 40px 0;
+    background-image: url("/images/portrait.png");
+    background-size: 1252px;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    height: 100vh;
     nav {
+        padding: 40px 0;
+        font-weight: 700;
         ul {
             display: flex;
             align-items: center;
             justify-content: center;
             list-style: none;
-            li {
+                li {
                 padding: 0 20px;
-            }
+                    }
             a {
                 cursor: pointer;
                 text-decoration: none;
@@ -33,10 +43,43 @@ header {
             }
         }
     }
+    .intro {
+        padding-top: 300px;
+        height: 100vh;
+        font-size: 73px;
+        font-weight: 300;
+        padding-left: 300px;
+        span {
+            font-weight: 700;
+            color: $pink;
+        }
+    }
 }
 
 .active {
     color: $pink;
     padding-bottom: 5px;
     border-bottom: 2px solid $pink;
+}
+
+.buttons {
+    margin-top: 40px;
+}
+
+.button1 {
+    background: $pink;
+    padding: 17px 73px;
+    font-size: 18px;
+    border-radius: 3px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.button2 {
+    background: none;
+    padding: 17px 73px;
+    border: none;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: underline;
 }
