@@ -1,1 +1,48 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+* {
+  background: #1C1C1C;
+  color: #FFFFFF;
+  font-family: "Roboto", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  padding: 40px 0;
+}
+
+header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style: none;
+}
+
+header nav ul li {
+  padding: 0 20px;
+}
+
+header nav ul a {
+  cursor: pointer;
+  text-decoration: none;
+  margin: 0;
+}
+
+header nav ul a:hover {
+  color: #FF6D85;
+  padding-bottom: 5px;
+  -webkit-transition: all ease .3s;
+  transition: all ease .3s;
+}
+
+.active {
+  color: #FF6D85;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #FF6D85;
+}
+/*# sourceMappingURL=style.css.map */
