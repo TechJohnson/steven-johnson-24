@@ -2,133 +2,286 @@ $pink: #FF6D85;
 $white: #FFFFFF;
 $gray: #1C1C1C;
 
-* {
-    color: $white;
-    font-family: "Roboto", sans-serif;
-    padding: 0;
-    margin: 0;
-}
 
-body {
-    background: $gray;
-    font-size: 18px;
-}
 
-header {
-    background-image: url("/images/portrait.png");
-    background-size: 1252px;
-    background-repeat: no-repeat;
-    background-position: bottom right;
-    height: 100vh;
-    nav {
-        padding: 40px 0;
-        font-weight: 700;
-        ul {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            list-style: none;
-                li {
-                padding: 0 20px;
+// Mobile
+  @media screen and (max-width: 550px) {
+    * {
+        color: $white;
+        font-family: "Roboto", sans-serif;
+        padding: 0;
+        margin: 0;
+    }
+    
+    body {
+        background: $gray;
+        font-size: 18px;
+    }
+    
+    header {
+        background-image: url("/images/portrait.png");
+        background-size: 750px;
+        background-repeat: no-repeat;
+        background-position: -215 bottom;
+        height: 100vh;
+        nav {
+            display: none;
+            padding: 40px 0;
+            font-weight: 700;
+            ul {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                list-style: none;
+                    li {
+                    padding: 0 20px;
+                        }
+                a {
+                    cursor: pointer;
+                    text-decoration: none;
+                    margin: 0;
+                    &:hover {
+                        color: $pink;
+                        text-shadow: 0 0 36px $pink;
+                        transition: all ease .3s;
                     }
-            a {
-                cursor: pointer;
-                text-decoration: none;
-                margin: 0;
-                &:hover {
-                    color: $pink;
-                    text-shadow: 0 0 36px $pink;
-                    transition: all ease .3s;
                 }
             }
         }
-    }
-    .intro {
-        padding-top: 300px;
-        font-size: 73px;
-        font-weight: 300;
-        padding-left: 300px;
-        span {
-            font-weight: 700;
-            color: $pink;
+        .intro {
+            padding: 100px 20px 20px 20px;
+            font-size: 28px;
+            font-weight: 300;
+            text-align: center;
+            span {
+                font-weight: 700;
+                color: $pink;
+            }
         }
     }
-}
-
-.active {
-    color: $pink;
-    padding-bottom: 5px;
-    border-bottom: 2px solid $pink;
-    text-shadow: 0 0 36px $pink;
-}
-
-.buttons {
-    margin-top: 40px;
-}
-
-.button1 {
-    background: $pink;
-    padding: 17px 73px;
-    font-size: 18px;
-    border-radius: 3px;
-    font-weight: 700;
-    text-decoration: none;
-    &:hover {
-        background: darken($pink, 10%);
-        transition: all ease .3s;
-        box-shadow: 0 0 75px rgba($pink, .5);
-    }
-}
-
-.button2 {
-    background: none;
-    padding: 17px 73px;
-    border: none;
-    font-size: 18px;
-    border-radius: 3px;
-    font-weight: 700;
-    text-decoration: underline;
-    &:hover {
-        transition: all ease .3s;
+    
+    .active {
         color: $pink;
+        padding-bottom: 5px;
+        border-bottom: 2px solid $pink;
         text-shadow: 0 0 36px $pink;
     }
-}
+    
+    .buttons {
+        margin-top: 40px;
+    }
+    
+    .button1 {
+        background: $pink;
+        padding: 17px 50px;
+        font-size: 18px;
+        border-radius: 3px;
+        font-weight: 700;
+        text-decoration: none;
+        &:hover {
+            background: darken($pink, 10%);
+            transition: all ease .3s;
+            box-shadow: 0 0 75px rgba($pink, .5);
+        }
+    }
+    
+    .button2 {
+        background: none;
+        padding: 17px 50px;
+        border: none;
+        font-size: 18px;
+        border-radius: 3px;
+        font-weight: 700;
+        text-decoration: underline;
+        &:hover {
+            transition: all ease .3s;
+            color: $pink;
+            text-shadow: 0 0 36px $pink;
+        }
+    }
+    
+    .tooltip {
+        position: relative;
+        display: inline-block;
+      }
+      
+      .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 150px;
+        background-color: $white;
+        color: black;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        left: 50%;
+        margin-left: -73px;
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+      
+      .tooltip .tooltiptext::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: $white transparent transparent transparent;
+      }
+      
+      .tooltip:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+      }
+    
+  }
 
-.tooltip {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .tooltip .tooltiptext {
-    visibility: hidden;
-    width: 150px;
-    background-color: $white;
-    color: black;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    position: absolute;
-    z-index: 1;
-    bottom: 125%;
-    left: 50%;
-    margin-left: -73px;
-    opacity: 0;
-    transition: opacity 0.3s;
-  }
-  
-  .tooltip .tooltiptext::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: $white transparent transparent transparent;
-  }
-  
-  .tooltip:hover .tooltiptext {
-    visibility: visible;
-    opacity: 1;
+
+
+
+
+
+
+
+
+
+
+
+  // Desktop
+  @media screen and (min-width: 550px) {
+    * {
+        color: $white;
+        font-family: "Roboto", sans-serif;
+        padding: 0;
+        margin: 0;
+    }
+    
+    body {
+        background: $gray;
+        font-size: 18px;
+    }
+    
+    header {
+        background-image: url("/images/portrait.png");
+        background-size: 1252px;
+        background-repeat: no-repeat;
+        background-position: bottom right;
+        height: 100vh;
+        nav {
+            padding: 40px 0;
+            font-weight: 700;
+            ul {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                list-style: none;
+                    li {
+                    padding: 0 20px;
+                        }
+                a {
+                    cursor: pointer;
+                    text-decoration: none;
+                    margin: 0;
+                    &:hover {
+                        color: $pink;
+                        text-shadow: 0 0 36px $pink;
+                        transition: all ease .3s;
+                    }
+                }
+            }
+        }
+        .intro {
+            padding-top: 300px;
+            font-size: 73px;
+            font-weight: 300;
+            padding-left: 300px;
+            span {
+                font-weight: 700;
+                color: $pink;
+            }
+        }
+    }
+    
+    .active {
+        color: $pink;
+        padding-bottom: 5px;
+        border-bottom: 2px solid $pink;
+        text-shadow: 0 0 36px $pink;
+    }
+    
+    .buttons {
+        margin-top: 40px;
+    }
+    
+    .button1 {
+        background: $pink;
+        padding: 17px 73px;
+        font-size: 18px;
+        border-radius: 3px;
+        font-weight: 700;
+        text-decoration: none;
+        &:hover {
+            background: darken($pink, 10%);
+            transition: all ease .3s;
+            box-shadow: 0 0 75px rgba($pink, .5);
+        }
+    }
+    
+    .button2 {
+        background: none;
+        padding: 17px 73px;
+        border: none;
+        font-size: 18px;
+        border-radius: 3px;
+        font-weight: 700;
+        text-decoration: underline;
+        &:hover {
+            transition: all ease .3s;
+            color: $pink;
+            text-shadow: 0 0 36px $pink;
+        }
+    }
+    
+    .tooltip {
+        position: relative;
+        display: inline-block;
+      }
+      
+      .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 150px;
+        background-color: $white;
+        color: black;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        left: 50%;
+        margin-left: -73px;
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+      
+      .tooltip .tooltiptext::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: $white transparent transparent transparent;
+      }
+      
+      .tooltip:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+      }
+    
   }
