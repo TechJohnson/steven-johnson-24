@@ -1,3 +1,7 @@
+.container {
+  padding: 0 20px;
+}
+
 @media screen and (max-width: 550px) {
   * {
     color: #FFFFFF;
@@ -9,11 +13,13 @@
     background: #1C1C1C;
     font-size: 18px;
   }
-  header {
+  #header {
     background-image: url("/images/portrait.png");
     background-size: 750px;
     background-repeat: no-repeat;
     background-position: -215 bottom;
+  }
+  header {
     height: 100vh;
   }
   header nav {
@@ -144,12 +150,16 @@
     background: #1C1C1C;
     font-size: 18px;
   }
-  header {
+  #header {
     background-image: url("/images/portrait.png");
     background-size: 70%;
     background-repeat: no-repeat;
     background-position: bottom right;
     height: 100vh;
+  }
+  #page-header nav {
+    -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
   }
   header nav {
     padding: 40px 0;
@@ -190,6 +200,15 @@
   header .intro span {
     font-weight: 700;
     color: #FF6D85;
+  }
+  header .showcase {
+    text-align: center;
+    padding: 60px 0;
+    margin: 0;
+  }
+  header .showcase h1 {
+    font-size: 51px;
+    padding-bottom: 15px;
   }
   .active {
     color: #FF6D85;
@@ -264,6 +283,22 @@
   .tooltip:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
+  }
+  .portfolio {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .portfolio a {
+    margin: 10px;
+  }
+  .portfolio img {
+    max-width: 100%;
   }
 }
 /*# sourceMappingURL=style.css.map */
